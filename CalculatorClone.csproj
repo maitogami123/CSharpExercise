@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +79,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\image\kisspng-computer-icons-hamburger-button-menu-new-menu-5b34724c3cb0f7.1188475115301637882486.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\image\326655_history_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\image\toppng.com-clear-symbol-icon-clear-icon-1321x901 %281%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\image\929001-200.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
