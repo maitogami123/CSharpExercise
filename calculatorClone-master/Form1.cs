@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CalculatorClone
@@ -13,10 +6,10 @@ namespace CalculatorClone
     public partial class Form1 : Form
     {
         double A;
-        string Operation="";
-        bool tiep=false;
-        bool g=false;
-        bool delete_lock=false;
+        string Operation = "";
+        bool tiep = false;
+        bool g = false;
+        bool delete_lock = false;
         public Form1()
         {
             InitializeComponent();
@@ -139,17 +132,17 @@ namespace CalculatorClone
         private void MyButtonClick(object sender, EventArgs e)
         {
             delete_lock = false;
-            if (tiep == false && Operation=="")
+            if (tiep == false && Operation == "")
             {
                 label2.Text = "0";
             }
             if (g == true)
             {
                 label3.Text = "0";
-                g= false;
+                g = false;
             }
             string buttonText = ((Button)sender).Text;
-            switch(buttonText)
+            switch (buttonText)
             {
                 case "0":
                     if (label3.Text != "0" && label3.Text != null)
@@ -167,7 +160,7 @@ namespace CalculatorClone
                         label3.Text = label3.Text + "1";
                     }
                     break;
-                case"2":
+                case "2":
                     if (label3.Text == "0" && label3.Text != null)
                     {
                         label3.Text = "2";
@@ -176,7 +169,7 @@ namespace CalculatorClone
                     {
                         label3.Text = label3.Text + "2";
                     }
-                    break ;
+                    break;
                 case "3":
                     if (label3.Text == "0" && label3.Text != null)
                     {
@@ -187,7 +180,7 @@ namespace CalculatorClone
                         label3.Text = label3.Text + "3";
                     }
                     break;
-                case"4":
+                case "4":
                     if (label3.Text == "0" && label3.Text != null)
                     {
                         label3.Text = "4";
@@ -197,7 +190,7 @@ namespace CalculatorClone
                         label3.Text = label3.Text + "4";
                     }
                     break;
-                case"5":
+                case "5":
                     if (label3.Text == "0" && label3.Text != null)
                     {
                         label3.Text = "5";
@@ -207,7 +200,7 @@ namespace CalculatorClone
                         label3.Text = label3.Text + "5";
                     }
                     break;
-                case"6":
+                case "6":
                     if (label3.Text == "0" && label3.Text != null)
                     {
                         label3.Text = "6";
@@ -226,8 +219,8 @@ namespace CalculatorClone
                     {
                         label3.Text = label3.Text + "7";
                     }
-                    break ;
-                case"8":
+                    break;
+                case "8":
                     if (label3.Text == "0" && label3.Text != null)
                     {
                         label3.Text = "8";
@@ -237,7 +230,7 @@ namespace CalculatorClone
                         label3.Text = label3.Text + "8";
                     }
                     break;
-                case"9":
+                case "9":
                     if (label3.Text == "0" && label3.Text != null)
                     {
                         label3.Text = "9";
@@ -325,7 +318,7 @@ namespace CalculatorClone
                         label3.Text = "0";
                         Operation = "*";
                     }
-                    break ;
+                    break;
                 case "/":
                     if (Operation == "")
                     {
@@ -347,7 +340,7 @@ namespace CalculatorClone
             if (Operation == "+")
             {
                 Result = (A + B);
-                label2.Text = label2.Text+" "+B+" =";
+                label2.Text = label2.Text + " " + B + " =";
                 label3.Text = Convert.ToString(Result);
                 A = Result;
             }
@@ -385,8 +378,8 @@ namespace CalculatorClone
                 label2.Text = label3.Text + " =";
             }
             Operation = "";
-            tiep=false;
-            g=true;
+            tiep = false;
+            g = true;
             delete_lock = true;
         }
 
@@ -403,6 +396,51 @@ namespace CalculatorClone
                 {
                     label3.Text = "0";
                 }
+            }
+        }
+
+        public int RutGon(int x, int y)
+        {
+            if (y == 0)
+                return x;
+            return RutGon(y, x / y);
+        }
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //double A = 1;
+            double B = Convert.ToDouble(label3.Text);
+            double Result = 1;
+            if (label3.Text != "0" && label3.Text != null)
+            {
+                Result = 1 / B;
+                label3.Text = $"1 / {B} = ";
+                label2.Text = Convert.ToString(Result);
+                label3.Text = "0";
+
+            }
+            else
+            {
+                label3.Text = "Cannot divide by zero";
+            }
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            double Result = 1;
+            A = Convert.ToDouble(label3.Text);
+            if(label3.Text != null)
+            {
+                Result = Math.Pow(A, 2);
+                label3.Text = $"{A} ^ 2 = ";
+                label2.Text= Convert.ToString(Result);
+                label3.Text = "0";
+
             }
         }
     }

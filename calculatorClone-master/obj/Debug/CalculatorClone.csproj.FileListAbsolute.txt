@@ -9,3 +9,14 @@ D:\C#_Project\calculatorClone-master\obj\Debug\CalculatorClone.csproj.GenerateRe
 D:\C#_Project\calculatorClone-master\obj\Debug\CalculatorClone.csproj.CoreCompileInputs.cache
 D:\C#_Project\calculatorClone-master\obj\Debug\CalculatorClone.exe
 D:\C#_Project\calculatorClone-master\obj\Debug\CalculatorClone.pdb
+D:\allCode\Winform\calculatorClone\calculatorClone-master\bin\Debug\CalculatorClone.exe.config
+D:\allCode\Winform\calculatorClone\calculatorClone-master\bin\Debug\CalculatorClone.exe
+D:\allCode\Winform\calculatorClone\calculatorClone-master\bin\Debug\CalculatorClone.pdb
+D:\allCode\Winform\calculatorClone\calculatorClone-master\obj\Debug\CalculatorClone.csproj.AssemblyReference.cache
+D:\allCode\Winform\calculatorClone\calculatorClone-master\obj\Debug\CalculatorClone.csproj.SuggestedBindingRedirects.cache
+D:\allCode\Winform\calculatorClone\calculatorClone-master\obj\Debug\CalculatorClone.Form1.resources
+D:\allCode\Winform\calculatorClone\calculatorClone-master\obj\Debug\CalculatorClone.Properties.Resources.resources
+D:\allCode\Winform\calculatorClone\calculatorClone-master\obj\Debug\CalculatorClone.csproj.GenerateResource.cache
+D:\allCode\Winform\calculatorClone\calculatorClone-master\obj\Debug\CalculatorClone.csproj.CoreCompileInputs.cache
+D:\allCode\Winform\calculatorClone\calculatorClone-master\obj\Debug\CalculatorClone.exe
+D:\allCode\Winform\calculatorClone\calculatorClone-master\obj\Debug\CalculatorClone.pdb

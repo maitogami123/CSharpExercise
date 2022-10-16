@@ -441,6 +441,7 @@ namespace CalculatorClone
             this.button7.TabIndex = 6;
             this.button7.Text = "sqrt";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -455,6 +456,7 @@ namespace CalculatorClone
             this.button6.TabIndex = 5;
             this.button6.Text = "pow(2)";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -469,6 +471,7 @@ namespace CalculatorClone
             this.button5.TabIndex = 4;
             this.button5.Text = "1/x";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // clear
             // 
