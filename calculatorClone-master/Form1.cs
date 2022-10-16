@@ -427,7 +427,16 @@ namespace CalculatorClone
 
         private void button7_Click(object sender, EventArgs e)
         {
-            
+            double Result = 1;
+            A = Convert.ToDouble(label3.Text);
+            if (label3.Text != null)
+            {
+                Result = Math.Sqrt(A);
+                label3.Text = $"Sqrt({A} = ";
+                label2.Text = Convert.ToString(Result);
+                
+            }
+            label3.Text = "0";
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -440,7 +449,6 @@ namespace CalculatorClone
                 label3.Text = $"{A} ^ 2 = ";
                 label2.Text= Convert.ToString(Result);
                 label3.Text = "0";
-
             }
         }
     }
