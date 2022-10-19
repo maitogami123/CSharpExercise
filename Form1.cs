@@ -70,7 +70,7 @@ namespace CalculatorClone
                     formatString();
                     break;
                 case "0":
-                    if (label3.Text != "0" && label3.Text != null)
+                    if (label3.Text != "0" && label3.Text != null && label3.Text.Length < 11)
                     {
                         label3.Text = label3.Text + "0";
                     }
@@ -538,7 +538,7 @@ namespace CalculatorClone
 
         private void buttonPress(object sender, KeyPressEventArgs e)
         {
-            lock2 = false;
+           lock2 = false;
             lock1 = false;
             //
             //= "";
