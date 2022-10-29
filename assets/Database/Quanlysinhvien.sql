@@ -1,0 +1,52 @@
+﻿CREATE DATABASE Quanlysinhvien
+GO
+
+USE Quanlysinhvien
+GO
+
+CREATE TABLE Mon 
+(
+   MaMH NCHAR(6) PRIMARY KEY,
+   TenMH NCHAR(6),
+   SoTiet INT NOT NULL
+)
+GO
+
+CREATE TABLE Khoa
+(
+   MaKhoa NCHAR(6) PRIMARY KEY,
+   TenKhoa NCHAR(30) NOT NULL
+)
+GO
+
+CREATE TABLE SinhVien
+(
+   MaSo INT NOT NULL,
+   HoTen NVARCHAR(50) NOT NULL,
+   NgaySinh DATETIME NOT NULL DEFAULT GETDATE(),
+   GioiTinh BIT NOT NULL,
+   DiaChi NVARCHAR(50) NOT NULL,
+   DienThoai INT NOT NULL,
+   idMaKhoa NCHAR(6) NOT NULL,
+   PRIMARY KEY (MaSo),
+
+   -- Khóa ngoại
+   FOREIGN KEY (idMaKhoa) REFERENCES dbo.Khoa(MaKhoa)
+)
+GO
+
+
+CREATE TABLE KetQua
+(
+   MaSo INT NOT NULL,
+   MaMH NCHAR(6),
+   Diem INT NOT NULL,
+   PRIMARY KEY (MaSo,MaMH),
+
+   --Khóa ngoại 
+   FOREIGN KEY (MaSo) REFERENCES SinhVien(MaSo),
+   FOREIGN KEY (MaMH) REFERENCES Mon(MaMH)
+  
+)
+GO
+
